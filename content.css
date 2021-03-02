@@ -1,0 +1,341 @@
+.content {
+    color: black;
+    padding: 0 5%;
+    margin: 0 0 4rem 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.grid-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.description{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    z-index: 2;
+    visibility: hidden;
+}
+
+/* WE COULD CHANGE THIS VALUE WHEN DESIGNING RESPONSIVLEY AND WILL CHANGE ALL PICTURE SIZES */
+
+.stussy-nike {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.stussy-nike:before{
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Nike-New-Arrivals_b350be74-3e9f-49a6-81a1-a2b3b8d08f6e_2048x.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    opacity: 1;
+}
+
+.stussy-nike:after{
+    width: 100%;
+    height: 100%;
+    background-image: url("images/Nike-New-Arrivals_b350be74-3e9f-49a6-81a1-a2b3b8d08f6e_2048x.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 0%;
+    content: '';
+    z-index: 1;
+    opacity: 0;
+}
+
+.stussy-nike:hover:before{
+    opacity: 0;
+}
+
+.stussy-nike:hover:after{
+    opacity: 0.4;
+}
+
+.stussy-nike:hover > .description {
+    visibility: visible;
+}
+
+.jackets {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.jackets:before{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Jackets-EDIT_9c18a12c-d45c-455b-ae87-5698974356df_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    opacity: 1;
+}
+
+.jackets:after{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Jackets-EDIT_9c18a12c-d45c-455b-ae87-5698974356df_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: absolute;
+    top: 0%;
+    content: '';
+    z-index: 1;
+    opacity: 0;
+}
+
+.jackets:hover:before{
+    opacity: 0;
+}
+
+.jackets:hover:after{
+    opacity: 0.4;
+}
+
+.jackets:hover > .description {
+    visibility: visible;
+}
+
+.shirts {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.shirts:before{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/W49-Mens-Tee-GIF_2048x.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    opacity: 1;
+}
+
+.shirts:after{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/W49-Mens-Tee-GIF_2048x.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0%;
+    content: '';
+    z-index: 1;
+    opacity: 0;
+}
+
+.shirts:hover:before{
+    opacity: 0;
+}
+
+.shirts:hover:after{
+    opacity: 0.4;
+}
+
+.shirts:hover > .description {
+    visibility: visible;
+}
+
+.accessories {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.accessories:before{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/8ball_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    opacity: 1;
+}
+
+.accessories:after{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/8ball_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 0%;
+    content: '';
+    z-index: 1;
+    opacity: 0;
+}
+
+.accessories:hover:before{
+    opacity: 0;
+}
+
+.accessories:hover:after{
+    opacity: 0.4;
+}
+
+.accessories:hover > .description {
+    visibility: visible;
+}
+
+.pants {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.pants:before{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Pants-2_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    opacity: 1;
+}
+
+.pants:after{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Pants-2_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 0%;
+    content: '';
+    z-index: 1;
+    opacity: 0;
+}
+
+.pants:hover:before{
+    opacity: 0;
+}
+
+.pants:hover:after{
+    opacity: 0.4;
+}
+
+.pants:hover > .description {
+    visibility: visible;
+}
+
+.womens-shirts {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.womens-shirts:before{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Womens-Shirts-1_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    content: '';
+    z-index: 1;
+    opacity: 1;
+}
+
+.womens-shirts:after{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Womens-Shirts-1_2048x.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 0%;
+    content: '';
+    z-index: 1;
+    opacity: 0;
+}
+
+.womens-shirts:hover:before{
+    opacity: 0;
+}
+
+.womens-shirts:hover:after{
+    opacity: 0.4;
+}
+
+.womens-shirts:hover > .description {
+    visibility: visible;
+}
+
+@media screen and (max-width: 800px){
+    .stussy-nike:before{ 
+        background-position: center;
+    }
+    .stussy-nike:after{ 
+        background-position: center;
+    }
+    .jackets:before{ 
+        background-position: center;
+    }
+    .jackets:after{ 
+        background-position: center;
+    }
+    .accessories:before{ 
+        background-position: center;
+    }
+    .accessories:after{ 
+        background-position: center;
+    }
+    .pants:before{ 
+        background-position: center;
+    }
+    .pants:after{ 
+        background-position: center;
+    }
+    .womens-shirts:before{ 
+        background-position: center;
+    }
+    .womens-shirts:after{ 
+        background-position: center;
+    }
+}
+
+
+
+
