@@ -14,12 +14,12 @@ if(window.innerWidth > 800){
 //MOBILE VIEW
 else {
     document.querySelectorAll('.grid-box').forEach( box => {
-        var height = window.innerWidth/8;
+        var height = window.innerWidth/7;
         var width = height/0.62;
         box.style.height = height + "vh";
         box.style.width = width + "vh";
 
-        document.querySelector('.content').style.height = height*6.2 + "vh";
+        document.querySelector('.content').style.height = height*6.45 + "vh";
     })
 }
 
@@ -39,12 +39,12 @@ window.onresize = function (event) {
 //MOBILE VIEW
     else {
         document.querySelectorAll('.grid-box').forEach( box => {
-            var height = window.innerWidth/8;
+            var height = window.innerWidth/7;
             var width = height/0.62;
             box.style.height = height + "vh";
             box.style.width = width + "vh";
 
-            document.querySelector('.content').style.height = height*6.2 + "vh";
+            document.querySelector('.content').style.height = height*6.45 + "vh";
         })
     }
 }

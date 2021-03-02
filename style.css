@@ -9,6 +9,7 @@
 }
 
 html, body {
+    overflow-x: hidden;
 }
 
 body{
@@ -16,7 +17,6 @@ body{
     font-family: Helvetica, sans-serif;
     color: black;
     background-color: rgb(255, 253, 253);
-    overflow-x: hidden;
 }
 
 .container{
@@ -214,15 +214,5 @@ a{
 
     .nav-bar{
         height: 6vh;
-    }
-}
-
-@media screen and (max-width: 600px){
-    .nav-bar{
-        height: 6vh;
-    }
-
-    .grid-container{
-        margin: 0 2%;
     }
 }
