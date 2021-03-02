@@ -1,7 +1,6 @@
 .content {
-    background-color: blue;
     color: black;
-    margin: 0 0 1rem 0;
+    margin: 2rem 0 12rem 0;
 }
 
 .row {
@@ -304,6 +303,10 @@
 }
 
 @media screen and (max-width: 800px){
+    .content {
+        margin: 0 1rem;
+        overflow: hidden;
+    }
     .stussy-nike:before{ 
         background-position: center;
     }

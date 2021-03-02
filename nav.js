@@ -1,47 +1,87 @@
-var mens_link = document.querySelector('#mens-link');
-var mens_dropdown = document.querySelector('.mens-dropdown');
+var nav_children = document.querySelector('.desktop-nav-shop').children;
+var drop_children = document.querySelectorAll('.dropdown');
 
-var womens_link = document.querySelector('#womens-link');
-var womens_dropdown = document.querySelector('.womens-dropdown');
+for (var i = 0; i < nav_children.length; i++) {
+    (function(i){
+        nav_children[i].addEventListener('mouseover', () => {
+            drop_children[i].style.visibility = "visible";
+            for(var x = 0; x < nav_children.length; x++){
+                if( i != x){
+                    drop_children[x].style.visibility = "hidden";
+                }
+            }
 
-var accessories_link = document.querySelector('#accessories-link');
-var accessories_dropdown = document.querySelector('.accessories-dropdown');
+            drop_children[i].addEventListener('mouseover', () => {
+                drop_children[i].style.visibility = "visible";
+            })
+        })
 
-mens_link.addEventListener('mouseover', menVisible);
-mens_dropdown.addEventListener('mouseleave', menHidden);
+        nav_children[i].addEventListener('mouseenter', () => {
+            drop_children[i].addEventListener('mouseout', () => {
+                drop_children[i].style.visibility = "hidden";
+            })
+        })
 
-womens_link.addEventListener('mouseover', womenVisible);
-womens_dropdown.addEventListener('mouseleave', womenHidden);
-
-accessories_link.addEventListener('mouseover', accessoriesVisible);
-accessories_dropdown.addEventListener('mouseleave', accessoriesHidden);
-
-function menVisible() {
-    mens_dropdown.style.visibility = 'visible';
-    womens_dropdown.style.visibility = 'hidden';
-    accessories_dropdown.style.visibility = 'hidden';
+    }(i));
 }
 
-function menHidden(){
-    mens_dropdown.style.visibility = 'hidden';
+
+/* 
+for (var i = 0; i < nav_children.length; i++) {
+    if(i === 0){
+        nav_children[i].addEventListener('mouseover', () => {
+            document.querySelector('.mens-dropdown').style.visibility = "visible";
+            document.querySelector('.womens-dropdown').style.visibility = "hidden";
+            document.querySelector('.accessories-dropdown').style.visibility = "hidden";
+        })
+
+        document.querySelector('.mens-dropdown').addEventListener('mouseover', () => {
+            document.querySelector('.mens-dropdown').style.visibility = "visible";
+            document.querySelector('.womens-dropdown').style.visibility = "hidden";
+            document.querySelector('.accessories-dropdown').style.visibility = "hidden";
+        })  
+
+        document.querySelector('.mens-dropdown').addEventListener('mouseleave', () => {
+            document.querySelector('.mens-dropdown').style.visibility = "hidden";
+        }) 
+    }
+
+    if(i === 1){
+        nav_children[i].addEventListener('mouseover', () => {
+            document.querySelector('.womens-dropdown').style.visibility = "visible";
+            document.querySelector('.mens-dropdown').style.visibility = "hidden";
+            document.querySelector('.accessories-dropdown').style.visibility = "hidden";
+        }) 
+        
+        document.querySelector('.womens-dropdown').addEventListener('mouseover', () => {
+            document.querySelector('.womens-dropdown').style.visibility = "visible";
+            document.querySelector('.mens-dropdown').style.visibility = "hidden";
+            document.querySelector('.accessories-dropdown').style.visibility = "hidden";
+        })  
+        
+        document.querySelector('.womens-dropdown').addEventListener('mouseleave', () => {
+            document.querySelector('.womens-dropdown').style.visibility = "hidden";
+        }) 
+    }
+
+    if(i === 2){
+        nav_children[i].addEventListener('mouseover', () => {
+            document.querySelector('.accessories-dropdown').style.visibility = "visible";
+            document.querySelector('.mens-dropdown').style.visibility = "hidden";
+            document.querySelector('.womens-dropdown').style.visibility = "hidden";
+        })
+
+        document.querySelector('.womens-dropdown').addEventListener('mouseover', () => {
+            document.querySelector('.accessories-dropdown').style.visibility = "visible";
+            document.querySelector('.mens-dropdown').style.visibility = "hidden";
+            document.querySelector('.womens-dropdown').style.visibility = "hidden";
+        })  
+        
+        document.querySelector('.accessories-dropdown').addEventListener('mouseleave', () => {
+            document.querySelector('.accessories-dropdown').style.visibility = "hidden";
+        }) 
+    }
+
 }
 
-function womenVisible() {
-    womens_dropdown.style.visibility = 'visible';
-    mens_dropdown.style.visibility = 'hidden';
-    accessories_dropdown.style.visibility = 'hidden';
-}
-
-function womenHidden(){
-    womens_dropdown.style.visibility = 'hidden';
-}
-
-function accessoriesVisible() {
-    accessories_dropdown.style.visibility = 'visible';
-    womens_dropdown.style.visibility = 'hidden';
-    mens_dropdown.style.visibility = 'hidden';
-}
-
-function accessoriesHidden(){
-    accessories_dropdown.style.visibility = 'hidden';
-}
+*/

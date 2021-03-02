@@ -22,68 +22,88 @@ body{
 .container{
     max-width: 1900px;
     margin: 0 auto;
-    padding: 0px;
 }
 
-.nav-bar{
-    padding: 0 5px;
-    display: flex;
-    height: 6vh;
-    font-size: 11px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.desktop-nav-shop{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 270px;
-}
-
-.desktop-nav-more{
-    display: flex;
-    justify-content: space-around;
-    width: 400px;
-}
-
-.stussy-logo{
-    display: flex;
+.nav-bar {
     position: relative;
-    height: 4.5vh;
-    justify-content: space-around;
-    align-self: center;
-    margin-right: 5px;
+    z-index: 3;
+    background-color: rgb(255, 253, 253);
+    height: 6vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    font-size: 0.70rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.stussy-logo:hover{
-    opacity: 0.4;
+.logo {
+    padding: 0 0 0 1rem;
+    position: fixed;
+    height: 4.5vh;
+    left: 0;
+}
+
+.desktop-nav-shop {
+    padding: 0 0 0 5rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+    left: 0;
+}
+
+.desktop-nav-more {
+    padding: 0 1rem 0 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+    right: 0;
+}
+
+.desktop-nav-shop-links {
+    margin: 0 0.5rem;
+}
+
+.desktop-nav-more-links {
+    margin: 0 0.5rem;
 }
 
 ul {
-    display: inline;
-    list-style: none;
+    list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.desktop-nav-shop-links a:hover{
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.desktop-nav-more-links a:hover{
+a:hover {
     color: gray;
 }
 
-.mens-dropdown{
-    position: absolute;
-    visibility: hidden;
-    z-index: 3;
+.burger {
+    display: none;
+}
+
+.dropdown {
+    top: 6vh;
+    position: fixed;
+    z-index: 4;
     width: 100%;
+}
+
+.mens-dropdown {
+    visibility: hidden;
+}
+
+.womens-dropdown {
+    visibility: hidden;
+}
+
+.accessories-dropdown {
+    visibility: hidden;
 }
 
 .mens-dropdown-nav{
@@ -94,25 +114,12 @@ a{
     height: 25vh;
     background-color: rgb(255, 253, 253);
     box-shadow: 0px 3px rgba(114, 113, 113, 0.296);
-    border-top: 1px solid;
     width: 100%;
-    padding: 10px 0px 30px 0px;
+    padding: 1rem 0 2rem 0;
 }
 
-.mens-dropdown-nav-links{
-    padding: 0 0 0 85px;
-}
-
-.mens-dropdown-nav-links a:hover{
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.womens-dropdown{
-    position: absolute;
-    visibility: hidden;
-    z-index: 3;
-    width: 100%;
+.mens-dropdown-nav > .dropdown-nav-links {
+    padding: 0 0 0 5.5rem;
 }
 
 .womens-dropdown-nav{
@@ -123,25 +130,12 @@ a{
     height: 25vh;
     background-color: rgb(255, 253, 253);
     box-shadow: 0px 3px rgba(114, 113, 113, 0.296);
-    border-top: 1px solid;
     width: 100%;
-    padding: 10px 0px 30px 0px;
+    padding: 1rem 0 2rem 0;
 }
 
-.womens-dropdown-nav-links{
-    padding: 0 0 0 85px;
-}
-
-.womens-dropdown-nav-links a:hover{
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.accessories-dropdown{
-    position: absolute;
-    visibility: hidden;
-    z-index: 3;
-    width: 100%;
+.womens-dropdown-nav > .dropdown-nav-links {
+    padding: 0 0 0 8.5rem;
 }
 
 .accessories-dropdown-nav{
@@ -149,21 +143,15 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 15vh;
+    height: 18vh;
     background-color: rgb(255, 253, 253);
     box-shadow: 0px 3px rgba(114, 113, 113, 0.296);
-    border-top: 1px solid;
     width: 100%;
-    padding: 10px 0px 30px 0px;
+    padding: 1rem 0 2rem 0;
 }
 
-.accessories-dropdown-nav-links{
-    padding: 0 0 0 85px;
-}
-
-.accessories-dropdown-nav-links a:hover{
-    font-weight: bold;
-    text-decoration: underline;
+.accessories-dropdown-nav > .dropdown-nav-links {
+    padding: 0 0 0 12.7rem;
 }
 
 /* FOOTER */
@@ -187,32 +175,34 @@ a{
     margin-left: 110px;
 }
 
-@media screen and (max-width: 1024px) {
-    .nav-bar{
-        padding: 0 4%;
-        height: 5vh;
-    }
-
-    .footer{
-        height: 5vh;
-    }
-}
-
 @media screen and (max-width: 800px){
-    .nav-bar{
-        padding: 0 45%;
-        height: 5vh;
+    .burger {
+        position: fixed;
+        display: flex;
+        background-image: url('images/burger_black.png');
+        height: 3.5vh;
+        width: 1.25rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        margin: 0 0 0 1rem;
+        position: fixed;
+        left: 0;
     }
 
-    .desktop-nav-more{
+    .logo {
+        display: flex;
+        height: 4.5vh;
+        position: fixed;
+        margin: 0 auto;
+        left: initial;
+    }
+
+    .desktop-nav-shop {
         display: none;
     }
 
-    .desktop-nav-shop-links{
+    .desktop-nav-more {
         display: none;
-    }
-
-    .nav-bar{
-        height: 6vh;
     }
 }
