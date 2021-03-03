@@ -1,0 +1,7 @@
+.desktop-nav-shop-links:hover > .dropdown {
+    display: block;
+}
+
+.dropdown:hover {
+    display: block;
+}
