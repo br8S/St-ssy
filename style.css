@@ -27,7 +27,7 @@ body{
 
 .nav-bar {
     position: relative;
-    z-index: 3;
+    z-index: 4;
     background-color: rgb(255, 253, 253);
     height: 6vh;
     width: 100%;
@@ -53,6 +53,14 @@ body{
     left: 5rem;
     height: 5vh;
     align-items: center;
+}
+
+.desktop-nav-shop-links:hover > .dropdown {
+    display: block;
+}
+
+.dropdown:hover {
+    display: block;
 }
 
 .desktop-nav-more {
@@ -98,10 +106,10 @@ a:hover {
     z-index: 3;
     width: 100%;
     display: none;
+    font-size: 11px;
 }
 
 .mens-dropdown-nav{
-    font-size: 11px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,7 +120,6 @@ a:hover {
 }
 
 .womens-dropdown-nav{
-    font-size: 11px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -124,7 +131,6 @@ a:hover {
 
 
 .accessories-dropdown-nav{
-    font-size: 11px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -180,9 +186,57 @@ a:hover {
 
     .desktop-nav-shop {
         display: none;
+        flex-direction: column;
+        background-color: rgb(255, 253, 253);
+        height: 100vh;
+        width: 23rem;
+        top: 0;
+        left: 0;
+        align-items: initial;
+        justify-content: initial;
+        padding: 0rem 0;
+        font-size: 12px;
+    }
+
+    .exit{
+        background-image: url('images/cross.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 1.6vh;
+        background-position: right;
+        margin: 1rem 1rem;
+        cursor: pointer;
+    }
+
+    .desktop-nav-shop-links {
+        margin: 0 1rem;
+        height: 3vh;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .dropdown-nav-links {
+        padding: 0.5rem 0;
+    }
+
+    .dropdown {
+        display: flex;
+        z-index: 3;
+        display: none;
+        font-size: 12px;
+        width: 21rem;
     }
 
     .desktop-nav-more {
+        display: none;
+    }
+
+    .desktop-nav-shop-links:hover > .dropdown {
+        display: none;
+    }
+    
+    .dropdown:hover {
         display: none;
     }
 }

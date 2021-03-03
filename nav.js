@@ -1,6 +1,25 @@
 var nav_children = document.querySelector('.desktop-nav-shop').children;
 var drop_children = document.querySelectorAll('.dropdown');
 
+for(var i = 0; i < nav_children.length; i++){
+    nav_children[i].addEventListener('click', () => {
+        document.querySelector('.mens-dropdown').style.display = 'flex';
+    })
+}
+
+document.querySelector('.burger').addEventListener('click', () => {
+    document.querySelector('.desktop-nav-shop').style.display = 'flex';
+})
+
+document.querySelector('.exit').addEventListener('click', () => {
+    document.querySelector('.desktop-nav-shop').style.display = 'none';
+})
+
+/*
+
+var nav_children = document.querySelector('.desktop-nav-shop').children;
+var drop_children = document.querySelectorAll('.dropdown');
+
 for (var i = 0; i < nav_children.length; i++) {
     (function(i){
 
@@ -22,3 +41,5 @@ for (var i = 0; i < nav_children.length; i++) {
 
     }(i));
 }
+
+*/
