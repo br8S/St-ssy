@@ -2,18 +2,37 @@ var nav_children = document.querySelector('.desktop-nav-shop').children;
 var drop_children = document.querySelectorAll('.dropdown');
 
 for(var i = 0; i < nav_children.length; i++){
-    nav_children[i].addEventListener('click', () => {
-        document.querySelector('.mens-dropdown').style.display = 'flex';
-    })
+    (function(i){
+        if(i == 0){
+            document.querySelector('.exit').addEventListener('click', () => {
+                document.querySelector('.desktop-nav-shop').style.display = 'none';
+                for(var x = 1; x < nav_children.length; x++){
+                    drop_children[x-1].style.display = 'none';
+                }
+            })
+        }
+        else {
+            nav_children[i].addEventListener('click', () => {
+                console.log(i)
+                drop_children[i-1].style.display = 'flex';
+            })
+        }
+    }(i));
 }
 
 document.querySelector('.burger').addEventListener('click', () => {
     document.querySelector('.desktop-nav-shop').style.display = 'flex';
 })
 
+/*
 document.querySelector('.exit').addEventListener('click', () => {
     document.querySelector('.desktop-nav-shop').style.display = 'none';
+    for(var i = 0; i < nav_children.length; i++){
+        drop_children[i].style.display = 'none';
+    }
 })
+
+*/
 
 /*
 
