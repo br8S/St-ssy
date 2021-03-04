@@ -53,6 +53,7 @@ body{
     left: 5rem;
     height: 5vh;
     align-items: center;
+    cursor: pointer;
 }
 
 .desktop-nav-shop-links:hover > .dropdown {
