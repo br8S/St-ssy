@@ -304,7 +304,7 @@
 
 @media screen and (max-width: 800px){
     .content {
-        margin: 0 1rem;
+        margin: 0 1rem 1rem 1rem;
         overflow: hidden;
     }
     .stussy-nike:before{ 
