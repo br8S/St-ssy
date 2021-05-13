@@ -43,6 +43,7 @@ body{
     position: fixed;
     height: 4.5vh;
     left: 0;
+    top: 1vh;
 }
 
 .desktop-nav-shop {
