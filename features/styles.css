@@ -14,12 +14,14 @@ body{
 .title {
     font-size: 0.8rem;
     text-align: center;
+    padding: 5rem 0 0.5rem 0;
 }
 
 .features-nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding:  0.5rem 0 1rem 0;
 }
 
 .features-nav-bar {
@@ -35,6 +37,7 @@ li {
 
 .feature-header {
     font-size: 0.8rem;
+    padding: 1rem 0;
 }
 
 .feature-info {
@@ -45,6 +48,7 @@ li {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 0 0.5rem;
 }
 
 .feature-grid-item {
