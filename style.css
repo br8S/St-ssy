@@ -44,17 +44,20 @@ body{
     height: 4.5vh;
     left: 0;
     top: 1vh;
+    z-index: 3;
 }
 
 .desktop-nav-shop {
     position: fixed;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
-    width: 13rem;
-    left: 5rem;
+    width: 18rem;
+    left: 0;
     height: 5vh;
     align-items: center;
     cursor: pointer;
+    padding: 0 6rem 0 6rem;
 }
 
 .desktop-nav-shop-links:hover > .dropdown {
@@ -106,19 +109,22 @@ a:hover {
     top: 6vh;
     position: fixed;
     z-index: 3;
+    height: 5vh;
     width: 100%;
-    display: none;
     font-size: 11px;
+    display: none;
+    left: 0;
 }
 
 .mens-dropdown-nav{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 25vh;
     background-color: rgb(255, 253, 253);
-    width: 100%;
-    padding: 1rem 0 2rem 0;
+    width: 30%;
+    height: 100vh;
+    left: 0;
+    padding: 1rem 0 2rem 6.5rem;
 }
 
 .womens-dropdown-nav{
@@ -162,6 +168,11 @@ a:hover {
     position: relative;
     margin-left: 110px;
 }
+
+.dropdown-nav-links {
+    padding: 0.2rem 0;
+}
+
 
 @media screen and (max-width: 800px){
     .burger {
