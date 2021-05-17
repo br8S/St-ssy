@@ -159,6 +159,7 @@ a {
     font-size: 11px;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
 }
 
 .footer-nav-links{
