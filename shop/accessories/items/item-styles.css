@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+}
+
+.item-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-imgs {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info {
+    width: 40%;
+}
+
+.shop-name {
+    font-size: 0.8rem;
+    padding: 1rem 0;
+}
+
+.shop-price {
+    font-size: 0.7rem;
+}
+
+.shop-info {
+    font-size: 0.67rem;
+    padding: 0.5rem 0;
+}
