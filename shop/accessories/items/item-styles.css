@@ -14,25 +14,43 @@ body {
     height: 100vh;
     width: 100%;
     display: flex;
-    padding: 0 5%;
+    flex-direction: row;
+    padding: 8vh 5%;
 }
 
 .item-imgs {
     position: relative;
     top: 0;
     left: 0;
-    width: 55%;
+    width: 38rem;
     display: flex;
     flex-direction: column;
+    margin: 0 0 0 20%;
 }
 
 .item-info {
     position: fixed;
     right: 0;
-    width: 40%;
+    width: 17rem;
     height: 100vh;
     top: 30vh;
-    margin: 0 10%;
+    margin: 0 25% 0 0;
+}
+
+#add_to_bag {
+    margin: 1rem 0;
+    height: 4vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+}
+
+#add_to_bag:hover {
+    cursor: pointer;
 }
 
 .shop-name {
@@ -45,6 +63,62 @@ body {
 }
 
 .shop-info {
-    font-size: 0.67rem;
+    font-size: 0.65rem;
+    line-height: 0.8REM;
     padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 1400px){
+    .item-imgs {
+        margin: 0 0 0 10%;
+    }
+    .item-info {
+        margin: 0 20% 0 0;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    .item-info {
+        margin: 0 15% 0 0;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .item-imgs {
+        margin: 0 0 0 8%;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .item-imgs {
+        margin: 0%;
+    }
+
+    .item-info {
+        margin: 0 10% 0 0;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .item-section {
+        flex-direction: column;
+    }
+    
+    .item-imgs {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0%;
+    }
+    
+    .item-info {
+        position: relative;
+        width: 100%;
+        top: 0vh;
+    }
+        
 }
