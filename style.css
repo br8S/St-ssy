@@ -130,27 +130,6 @@ a {
     padding: 1rem 0 2rem 6.5rem;
 }
 
-.womens-dropdown-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 25vh;
-    background-color: rgb(255, 253, 253);
-    width: 100%;
-    padding: 1rem 0 2rem 0;
-}
-
-
-.accessories-dropdown-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 18vh;
-    background-color: rgb(255, 253, 253);
-    width: 100%;
-    padding: 1rem 0 2rem 0;
-}
-
 /* FOOTER */
 
 .footer-nav{
@@ -262,5 +241,9 @@ a {
     
     .dropdown:hover {
         display: none;
+    }
+
+    .mens-dropdown-nav{
+        padding: 1rem 0 2rem 2rem;
     }
 }
