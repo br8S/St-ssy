@@ -337,6 +337,19 @@
     .womens-shirts:after{ 
         background-position: center;
     }
+
+    .description{
+        position: relative;
+        top: 102%;
+        text-align: center;
+        z-index: 2;
+        visibility: visible;
+        font-size: 1.1rem;
+    }
+
+    .column {
+        padding: 2.2rem 1rem;
+    }
 }
 
 

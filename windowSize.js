@@ -19,7 +19,7 @@ else {
         box.style.height = height + "vh";
         box.style.width = width + "vh";
 
-        document.querySelector('.content').style.height = height*6.3 + "vh";
+        document.querySelector('.content').style.height = height*6.8 + "vh";
     })
 }
 
@@ -44,7 +44,7 @@ window.onresize = function (event) {
             box.style.height = height + "vh";
             box.style.width = width + "vh";
 
-            document.querySelector('.content').style.height = height*6.3 + "vh";
+            document.querySelector('.content').style.height = height*6.8 + "vh";
         })
     }
 }
