@@ -307,6 +307,26 @@
         margin: 0 1rem 1rem 1rem;
         overflow: hidden;
     }
+
+    .stussy-nike:hover:after{
+        opacity: 1;
+    }
+    .jackets:hover:after{
+        opacity: 1;
+    }
+    .accessories:hover:after{
+        opacity: 1;
+    }
+    .pants:hover:after{
+        opacity: 1;
+    }
+    .shirts:hover:after{
+        opacity: 1;
+    }
+    .womens-shirts:hover:after{
+        opacity: 1;
+    }
+
     .stussy-nike:before{ 
         background-position: center;
     }
