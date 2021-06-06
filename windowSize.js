@@ -15,11 +15,11 @@ if(window.innerWidth > 800){
 else {
     document.querySelectorAll('.grid-box').forEach( box => {
         var height = window.innerWidth/7;
-        var width = height/0.62;
+        var width = height/0.675;
         box.style.height = height + "vh";
         box.style.width = width + "vh";
 
-        document.querySelector('.content').style.height = height*6.8 + "vh";
+        document.querySelector('.content').style.height = height*6.75 + "vh";
     })
 }
 
@@ -40,11 +40,11 @@ window.onresize = function (event) {
     else {
         document.querySelectorAll('.grid-box').forEach( box => {
             var height = window.innerWidth/7;
-            var width = height/0.62;
+            var width = height/0.675;
             box.style.height = height + "vh";
             box.style.width = width + "vh";
 
-            document.querySelector('.content').style.height = height*6.8 + "vh";
+            document.querySelector('.content').style.height = height*6.75 + "vh";
         })
     }
 }
